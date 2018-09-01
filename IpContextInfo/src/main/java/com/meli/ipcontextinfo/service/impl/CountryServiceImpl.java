@@ -1,6 +1,6 @@
 package com.meli.ipcontextinfo.service.impl;
 
-import com.meli.ipcontextinfo.command.TransformDtoToCountryModelCommand;
+import com.meli.ipcontextinfo.command.TransformDtoToCountryCommand;
 import com.meli.ipcontextinfo.model.Country;
 import com.meli.ipcontextinfo.service.CountryService;
 import com.meli.ipcontextinfo.service.CurrencyRateService;
@@ -50,11 +50,10 @@ public class CountryServiceImpl implements CountryService {
      * https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
      */
     @Override
-
     public Country getCountryByIsoCode(String isoCode) {
         try {
             CountryDto dto = getCountryDtoByIsoCode(isoCode);
-            return new TransformDtoToCountryModelCommand(
+            return new TransformDtoToCountryCommand(
                     dto,rateService.getCurrencyDolarRate(
                             dto.getCurrencies().iterator().next().getCode()))
                     .execute();
@@ -64,7 +63,7 @@ public class CountryServiceImpl implements CountryService {
         return null;
     }
 
-    @Cacheable
+    @Cacheable("isoCode")
     protected CountryDto getCountryDtoByIsoCode(String isoCode) throws RestClientException {
         return restTemplate.getForObject("/alpha/{isoCode}", CountryDto.class, isoCode);
     }

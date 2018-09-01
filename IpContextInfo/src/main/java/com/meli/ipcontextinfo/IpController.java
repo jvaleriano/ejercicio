@@ -4,7 +4,6 @@ import com.meli.ipcontextinfo.model.Country;
 import com.meli.ipcontextinfo.model.IpContextInfo;
 import com.meli.ipcontextinfo.service.CoordinateService;
 import com.meli.ipcontextinfo.service.CountryService;
-import com.meli.ipcontextinfo.service.CurrencyRateService;
 import com.meli.ipcontextinfo.service.IpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

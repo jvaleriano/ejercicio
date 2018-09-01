@@ -9,7 +9,6 @@ import org.springframework.cache.annotation.EnableCaching;
 public class Application {
 
     public Application() {
-        System.setProperty("java.net.useSystemProxies", "true");        
     }
     
     public static void main(String[] args) {

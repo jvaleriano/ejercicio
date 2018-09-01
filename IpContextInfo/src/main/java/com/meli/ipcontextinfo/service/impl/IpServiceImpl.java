@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
@@ -39,6 +40,7 @@ public class IpServiceImpl implements IpService {
      * Link: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-
      */
     @Override
+    @Cacheable("ip")
     public String getCountryCodeByIp(String ip) {
         try {
             return restTemplate.getForObject("/ip?{ip}", Ip2CountryDto.class, ip).getCountryCode3();
