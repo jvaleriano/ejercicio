@@ -14,9 +14,9 @@ import static org.junit.Assert.*;
  *
  * @author valer
  */
-public class TransformDtoToCountryCommandIT {
+public class TransformDtoToCountryCommandTest {
     
-    public TransformDtoToCountryCommandIT() {
+    public TransformDtoToCountryCommandTest() {
     }
     
     @BeforeClass

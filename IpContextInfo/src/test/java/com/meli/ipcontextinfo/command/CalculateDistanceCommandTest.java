@@ -12,9 +12,9 @@ import static org.junit.Assert.*;
  *
  * @author valer
  */
-public class CalculateDistanceCommandIT {
+public class CalculateDistanceCommandTest {
 
-    public CalculateDistanceCommandIT() {
+    public CalculateDistanceCommandTest() {
     }
 
     @BeforeClass
