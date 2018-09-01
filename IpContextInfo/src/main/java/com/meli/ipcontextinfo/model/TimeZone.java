@@ -56,8 +56,4 @@ public class TimeZone {
         return "TimeZone{" + "zoneId=" + zoneId + "time=" + getTime() + '}';
     }
 
-    
-    
-    
-
 }

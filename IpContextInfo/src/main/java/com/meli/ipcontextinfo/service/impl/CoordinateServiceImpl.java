@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author VAL13448
+ * 
  */
 @Service
 public class CoordinateServiceImpl implements CoordinateService{
@@ -27,9 +28,11 @@ public class CoordinateServiceImpl implements CoordinateService{
 
     /**
      *
-     * @param a 
-     * @param b
-     * @return
+     * @param a initial Coordinate
+     * @param b destiny Coordinate
+     * @see Coordinate
+     * @return Double represent the Distance in KM between Coordinate a and
+     * Coordinate b. a or b are null return 0;
      */
     @Override
     public Double calculateDistanceInKm(Coordinate a, Coordinate b) {
@@ -37,11 +40,26 @@ public class CoordinateServiceImpl implements CoordinateService{
 
     }
 
+    /**
+     *
+     * @param dest destiny Coordinate
+     * @see Coordinate
+     * @return Double represent the Distance in KM between Coordinate dest and
+     * origin Latitud: -34.608318 | Longitud: -58.370288 (casa rosada).
+     * if dest = null return 0;
+     */
     @Override
     public Double calculateDistanceToOriginInKm(Coordinate dest) {
         return calculateDistanceInKm(origin, dest);
     }
 
+    /**
+     *
+     * @return Coordinate origin 
+     * @default Latitud: -34.608318 | Longitud: -58.370288 (casa rosada).
+     * if dest = null return 0;
+     * @see Coordinate
+     */
     @Override
     public Coordinate getOrigin() {
         return origin;

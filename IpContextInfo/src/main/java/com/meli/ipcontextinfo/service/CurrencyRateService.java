@@ -9,8 +9,21 @@ import java.math.BigDecimal;
  */
 public interface CurrencyRateService {
     
-      BigDecimal getCurrencyRate(String currency , RateResponseCurrencyCode responseCurrencyCode);
+    /**
+     *
+     * @param currency code https://es.wikipedia.org/wiki/ISO_4217
+     * @param responseCurrencyCode 
+     * @see RateResponseCurrencyCode
+     * @return rate of the currency in responseCurrencyCode currency value
+     */
+    BigDecimal getCurrencyRate(String currency , RateResponseCurrencyCode responseCurrencyCode);
      
-      BigDecimal getCurrencyDolarRate(String currency);
+    /**
+     *
+     * @param currency code https://es.wikipedia.org/wiki/ISO_4217
+     * @see RateResponseCurrencyCode
+     * @return rate of the currency in American Dollar U$S
+     */
+    BigDecimal getCurrencyDolarRate(String currency);
     
 }

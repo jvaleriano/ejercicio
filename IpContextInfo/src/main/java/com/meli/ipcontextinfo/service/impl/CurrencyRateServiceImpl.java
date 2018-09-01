@@ -35,6 +35,13 @@ public class CurrencyRateServiceImpl implements CurrencyRateService{
         this.restTemplate.setUriTemplateHandler(new DefaultUriBuilderFactory(url+"/latest?access_key=606b069d85d65954dad92f822baa7805"));
     }
 
+    /**
+     *
+     * @param currency code https://es.wikipedia.org/wiki/ISO_4217
+     * @param responseCurrencyCode 
+     * @see RateResponseCurrencyCode
+     * @return rate of the currency in responseCurrencyCode currency value
+     */
     @Override
     public BigDecimal getCurrencyRate(String currency , RateResponseCurrencyCode responseCurrencyCode) {
         try {
@@ -48,6 +55,12 @@ public class CurrencyRateServiceImpl implements CurrencyRateService{
         return null;
     }
 
+    /**
+     *
+     * @param currency code https://es.wikipedia.org/wiki/ISO_4217
+     * @see RateResponseCurrencyCode
+     * @return rate of the currency in American Dollar U$S
+     */
     @Override
      public BigDecimal getCurrencyDolarRate(String currency) {
          return getCurrencyRate(currency, RateResponseCurrencyCode.USD);

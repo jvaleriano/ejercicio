@@ -5,7 +5,6 @@ import com.meli.ipcontextinfo.model.Country;
 import com.meli.ipcontextinfo.service.CountryService;
 import com.meli.ipcontextinfo.service.CurrencyRateService;
 import com.meli.ipcontextinfo.service.model.CountryDto;
-import java.math.BigDecimal;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,11 +62,21 @@ public class CountryServiceImpl implements CountryService {
         return null;
     }
 
+    /**
+     *
+     * @param isoCode
+     * @return
+     * @throws RestClientException
+     */
     @Cacheable("isoCode")
     protected CountryDto getCountryDtoByIsoCode(String isoCode) throws RestClientException {
         return restTemplate.getForObject("/alpha/{isoCode}", CountryDto.class, isoCode);
     }
 
+    /**
+     *
+     * @param rateService
+     */
     public void setRateService(CurrencyRateService rateService) {
         this.rateService = rateService;
     }
