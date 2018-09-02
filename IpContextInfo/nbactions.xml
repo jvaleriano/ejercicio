@@ -43,4 +43,19 @@
                 <exec.executable>java</exec.executable>
             </properties>
         </action>
+        <action>
+            <actionName>CUSTOM-dockerFile</actionName>
+            <displayName>dockerFile</displayName>
+            <goals>
+                <goal>deploy</goal>
+                
+            </goals>
+            <properties>
+                
+                <skipTests>true</skipTests>
+                
+                <jpda.listen>maven</jpda.listen>
+                
+            </properties>
+        </action>
     </actions>
