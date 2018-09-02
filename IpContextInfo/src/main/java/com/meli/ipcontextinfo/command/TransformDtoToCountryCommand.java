@@ -4,7 +4,7 @@ import com.meli.ipcontextinfo.model.Coordinate;
 import com.meli.ipcontextinfo.model.Country;
 import com.meli.ipcontextinfo.model.CountryName;
 import com.meli.ipcontextinfo.model.Currency;
-import com.meli.ipcontextinfo.model.Languaje;
+import com.meli.ipcontextinfo.model.Language;
 import com.meli.ipcontextinfo.model.TimeZone;
 import com.meli.ipcontextinfo.service.model.CountryCurrencyDto;
 import com.meli.ipcontextinfo.service.model.CountryDto;
@@ -75,11 +75,11 @@ public class TransformDtoToCountryCommand implements Command<Country> {
         return timeZones;
     }
 
-    private List<Languaje> parseLanguages() {
-        List<Languaje> languajes = new ArrayList<>();
+    private List<Language> parseLanguages() {
+        List<Language> languajes = new ArrayList<>();
         if(countryDto.getLanguages() != null && !countryDto.getLanguages().isEmpty()){
             countryDto.getLanguages().stream().forEach(a -> {
-                languajes.add(new Languaje(a.getIso639_2(), a.getNativeName()));
+                languajes.add(new Language(a.getIso639_2(), a.getNativeName()));
             });
            }
         return languajes;

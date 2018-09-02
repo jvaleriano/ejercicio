@@ -6,31 +6,55 @@ import java.util.Objects;
  *
  * @author VAL13448
  */
-public class Languaje {
+public class Language {
     
     private String name;
     private String code;
 
-    public Languaje(String name, String code) {
+    /**
+     *
+     * @param name
+     * @param code
+     */
+    public Language(String name, String code) {
         this.name = name;
         this.code = code;
     }
 
-    public Languaje() {
+    /**
+     *
+     */
+    public Language() {
     }
 
+    /**
+     *
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getCode() {
         return code;
     }
 
+    /**
+     *
+     * @param code
+     */
     public void setCode(String code) {
         this.code = code;
     }
@@ -50,7 +74,7 @@ public class Languaje {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Languaje other = (Languaje) obj;
+        final Language other = (Language) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }

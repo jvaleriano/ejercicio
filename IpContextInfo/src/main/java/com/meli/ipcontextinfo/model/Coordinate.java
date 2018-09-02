@@ -11,26 +11,50 @@ public class Coordinate {
     private Double lat = Double.MIN_VALUE;
     private Double lon = Double.MIN_VALUE;
 
+    /**
+     *
+     */
     public Coordinate() {
     }
 
+    /**
+     *
+     * @param lat
+     * @param lon
+     */
     public Coordinate(Double lat, Double lon) {
         this.lat = lat;
         this.lon = lon;
     }
 
+    /**
+     *
+     * @return
+     */
     public Double getLat() {
         return lat;
     }
 
+    /**
+     *
+     * @param lat
+     */
     public void setLat(Double lat) {
         this.lat = lat;
     }
 
+    /**
+     *
+     * @return
+     */
     public Double getLon() {
         return lon;
     }
 
+    /**
+     *
+     * @param lon
+     */
     public void setLon(Double lon) {
         this.lon = lon;
     }

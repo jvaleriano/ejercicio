@@ -11,23 +11,44 @@ public class CountryName {
     private String value;
     private String espValue;
 
+    /**
+     *
+     * @param value
+     * @param espValue
+     */
     public CountryName(String value, String espValue) {
         this.value = value;
         this.espValue = espValue;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getValue() {
         return value;
     }
 
+    /**
+     *
+     * @param value
+     */
     public void setValue(String value) {
         this.value = value;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getEspValue() {
         return espValue;
     }
 
+    /**
+     *
+     * @param espValue
+     */
     public void setEspValue(String espValue) {
         this.espValue = espValue;
     }

@@ -12,22 +12,42 @@ public class TimeZone {
 
     private ZoneId zoneId;
 
+    /**
+     *
+     * @param zoneId
+     */
     public TimeZone(ZoneId zoneId) {
         this.zoneId = zoneId;
     }
     
+    /**
+     *
+     * @param zoneId
+     */
     public TimeZone(String zoneId) {
         this.zoneId = ZoneId.of(zoneId);
     }
     
+    /**
+     *
+     * @return
+     */
     public ZoneId getZoneId() {
         return zoneId;
     }
 
+    /**
+     *
+     * @param zoneId
+     */
     public void setZoneId(ZoneId zoneId) {
         this.zoneId = zoneId;
     }
     
+    /**
+     *
+     * @return
+     */
     public LocalTime getTime() {
         return LocalTime.now(zoneId);
     }

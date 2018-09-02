@@ -3,6 +3,10 @@ package com.meli.ipcontextinfo.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ *
+ * @author valer
+ */
 public class IpContextInfo {
 
     private String ip;
@@ -11,10 +15,21 @@ public class IpContextInfo {
     private Double distanceInKm;
     private Coordinate origin;
 
+    /**
+     *
+     */
     public IpContextInfo() {
         this.date = LocalDateTime.now();
     }
 
+    /**
+     *
+     * @param ip
+     * @param date
+     * @param country
+     * @param distanceInKm
+     * @param origin
+     */
     public IpContextInfo(String ip, LocalDateTime date, Country country, Double distanceInKm, Coordinate origin) {
         this.ip = ip;
         this.date = date;
@@ -23,6 +38,13 @@ public class IpContextInfo {
         this.origin = origin;
     }
 
+    /**
+     *
+     * @param ip
+     * @param country
+     * @param distanceInKm
+     * @param origin
+     */
     public IpContextInfo(String ip, Country country, Double distanceInKm, Coordinate origin) {
         this.ip = ip;
         this.date = LocalDateTime.now();
@@ -31,42 +53,82 @@ public class IpContextInfo {
         this.origin = origin;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getIp() {
         return ip;
     }
 
+    /**
+     *
+     * @param ip
+     */
     public void setIp(String ip) {
         this.ip = ip;
     }
 
+    /**
+     *
+     * @return
+     */
     public LocalDateTime getDate() {
         return date;
     }
 
+    /**
+     *
+     * @param date
+     */
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
+    /**
+     *
+     * @return
+     */
     public Country getCountry() {
         return country;
     }
 
+    /**
+     *
+     * @param country
+     */
     public void setCountry(Country country) {
         this.country = country;
     }
 
+    /**
+     *
+     * @return
+     */
     public Double getDistanceInKm() {
         return distanceInKm;
     }
 
+    /**
+     *
+     * @param distanceInKm
+     */
     public void setDistanceInKm(Double distanceInKm) {
         this.distanceInKm = distanceInKm;
     }
 
+    /**
+     *
+     * @return
+     */
     public Coordinate getOrigin() {
         return origin;
     }
 
+    /**
+     *
+     * @param origin
+     */
     public void setOrigin(Coordinate origin) {
         this.origin = origin;
     }

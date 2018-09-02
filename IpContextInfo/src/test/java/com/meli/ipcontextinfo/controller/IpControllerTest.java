@@ -4,7 +4,7 @@ import com.meli.ipcontextinfo.model.Coordinate;
 import com.meli.ipcontextinfo.model.Country;
 import com.meli.ipcontextinfo.model.CountryName;
 import com.meli.ipcontextinfo.model.Currency;
-import com.meli.ipcontextinfo.model.Languaje;
+import com.meli.ipcontextinfo.model.Language;
 import com.meli.ipcontextinfo.model.TimeZone;
 import com.meli.ipcontextinfo.service.impl.CoordinateServiceImpl;
 import com.meli.ipcontextinfo.service.impl.CountryServiceImpl;
@@ -93,7 +93,7 @@ public class IpControllerTest {
 
        
         Country c = new Country(new CountryName("Germany", "Alemania"),
-                "DEU", new ArrayList<Languaje>(), new Currency("EUR", "€"),new ArrayList<TimeZone>()
+                "DEU", new ArrayList<Language>(), new Currency("EUR", "€"),new ArrayList<TimeZone>()
                 , co);
         
         when(countryService.getCountryByIsoCode("DEU")).thenReturn(c);
