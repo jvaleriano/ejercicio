@@ -79,7 +79,7 @@ public class TransformDtoToCountryCommand implements Command<Country> {
         List<Language> languajes = new ArrayList<>();
         if(countryDto.getLanguages() != null && !countryDto.getLanguages().isEmpty()){
             countryDto.getLanguages().stream().forEach(a -> {
-                languajes.add(new Language(a.getIso639_2(), a.getNativeName()));
+                languajes.add(new Language(a.getName(),a.getIso639_2()));
             });
            }
         return languajes;
