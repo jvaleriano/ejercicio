@@ -45,7 +45,7 @@ public class CurrencyRateServiceImpl implements CurrencyRateService{
     @Override
     public BigDecimal getCurrencyRate(String currency , RateResponseCurrencyCode responseCurrencyCode) {
         try {
-            CurrencyRateDto res =  restTemplate.getForObject("&base={currency}&symbols={responseCurrencyCode}", CurrencyRateDto.class,currency,responseCurrencyCode.toString());
+            CurrencyRateDto res =  getRestTemplate().getForObject("&base={currency}&symbols={responseCurrencyCode}", CurrencyRateDto.class,currency,responseCurrencyCode.toString());
             if(res != null && res.isSuccess()){
                 return res.getRates().values().iterator().next();
             }
@@ -72,4 +72,8 @@ public class CurrencyRateServiceImpl implements CurrencyRateService{
      
      invalid: {"success":false,"error":{"code":105,"type":"base_currency_access_restricted"}}
      */
+
+    protected RestTemplate getRestTemplate() {
+        return restTemplate;
+    }
 }

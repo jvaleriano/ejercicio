@@ -43,11 +43,14 @@ public class IpServiceImpl implements IpService {
     @Cacheable("ip")
     public String getCountryCodeByIp(String ip) {
         try {
-            return restTemplate.getForObject("/ip?{ip}", Ip2CountryDto.class, ip).getCountryCode3();
+            return getRestTemplate().getForObject("/ip?{ip}", Ip2CountryDto.class, ip).getCountryCode3();
         } catch (RestClientException ex) {
             LOG.log(Level.SEVERE, ex.getMessage(), ex);
         }
         return null;
     }
 
+    protected RestTemplate getRestTemplate() {
+        return restTemplate;
+    }
 }

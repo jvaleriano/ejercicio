@@ -1,4 +1,4 @@
-package com.meli.ipcontextinfo;
+package com.meli.ipcontextinfo.controller;
 
 import com.meli.ipcontextinfo.model.Country;
 import com.meli.ipcontextinfo.model.IpContextInfo;
@@ -27,7 +27,7 @@ public class IpController {
     private CoordinateService coordinateService;
 
     @RequestMapping("/trace")
-    public ResponseEntity<IpContextInfo> greeting(@RequestParam(value="ip") String ip) {
+    public ResponseEntity<IpContextInfo> trace(@RequestParam(value="ip") String ip) {
         String isoCode = ipService.getCountryCodeByIp(ip);
         if(!StringUtils.isEmpty(isoCode)){
             Country country = countryService.getCountryByIsoCode(isoCode);

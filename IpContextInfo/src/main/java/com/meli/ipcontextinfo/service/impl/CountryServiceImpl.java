@@ -70,7 +70,7 @@ public class CountryServiceImpl implements CountryService {
      */
     @Cacheable("isoCode")
     protected CountryDto getCountryDtoByIsoCode(String isoCode) throws RestClientException {
-        return restTemplate.getForObject("/alpha/{isoCode}", CountryDto.class, isoCode);
+        return getRestTemplate().getForObject("/alpha/{isoCode}", CountryDto.class, isoCode);
     }
 
     /**
@@ -81,5 +81,8 @@ public class CountryServiceImpl implements CountryService {
         this.rateService = rateService;
     }
 
+    protected RestTemplate getRestTemplate() {
+        return restTemplate;
+    }
     
 }
