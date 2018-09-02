@@ -21,6 +21,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 import static org.hamcrest.Matchers.endsWith;
+import org.springframework.test.context.ActiveProfiles;
 
 /**
  *
@@ -29,6 +30,7 @@ import static org.hamcrest.Matchers.endsWith;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @RestClientTest(IpServiceImpl.class)
+@ActiveProfiles("test")
 public class IpServiceTest {
 
     @Autowired

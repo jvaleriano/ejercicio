@@ -19,6 +19,7 @@ import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.client.MockRestServiceServer;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
@@ -35,6 +36,7 @@ import org.springframework.web.client.RestTemplate;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @RestClientTest({CountryServiceImpl.class, CurrencyRateServiceImpl.class})
+@ActiveProfiles("test")
 public class CountryServiceTest {
 
     @Autowired
