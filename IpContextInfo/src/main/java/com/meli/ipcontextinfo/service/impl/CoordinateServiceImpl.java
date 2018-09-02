@@ -21,8 +21,8 @@ public class CoordinateServiceImpl implements CoordinateService{
      * @param originLat System variable injected by spring default: -34.608318
      * @param originLon System variable injected by spring default: -58.370288
      */
-    public CoordinateServiceImpl(@Value("${origin.lat:-34.608318}") String originLat,
-            @Value("${origin.lon:-58.370288}") String originLon) {
+    public CoordinateServiceImpl(@Value("${ipContextInfo.origin.lat:-34.608318}") String originLat,
+            @Value("${ipContextInfo.origin.lon:-58.370288}") String originLon) {
         this.origin = new Coordinate(Double.valueOf(originLat), Double.valueOf(originLon));
     }
 

@@ -30,7 +30,7 @@ public class CurrencyRateServiceImpl implements CurrencyRateService{
      * @param url system parameter "url.currencyRate" default value https://data.fixer.io/api
      * @param apiKey
      */
-    public CurrencyRateServiceImpl(RestTemplateBuilder builder, @Value("${url.currencyRate:http://data.fixer.io/api}") String url, @Value("${url.currencyRate.apiKey:606b069d85d65954dad92f822baa7805}") String apiKey) {
+    public CurrencyRateServiceImpl(RestTemplateBuilder builder, @Value("${ipContextInfo.url.currencyRate:http://data.fixer.io/api}") String url, @Value("${ipContextInfo.url.currencyRate.apiKey:606b069d85d65954dad92f822baa7805}") String apiKey) {
         this.restTemplate = builder.build();
         this.restTemplate.setUriTemplateHandler(new DefaultUriBuilderFactory(url+"/latest?access_key=606b069d85d65954dad92f822baa7805"));
     }

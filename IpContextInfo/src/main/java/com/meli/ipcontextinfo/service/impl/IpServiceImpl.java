@@ -28,7 +28,7 @@ public class IpServiceImpl implements IpService {
      * @param builder
      * @param url system parameter "url.restIp2Country" default value https://api.ip2country.info
      */
-    public IpServiceImpl(RestTemplateBuilder builder, @Value("${url.restIp2Country:https://api.ip2country.info}") String url) {
+    public IpServiceImpl(RestTemplateBuilder builder, @Value("${ipContextInfo.url.restIp2Country:https://api.ip2country.info}") String url) {
         this.restTemplate = builder.build();
         this.restTemplate.setUriTemplateHandler(new DefaultUriBuilderFactory(url));
     }

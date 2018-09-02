@@ -37,7 +37,7 @@ public class CountryServiceImpl implements CountryService {
      * @param url system parameter "url.restCountry" default value
      * https://restcountries.eu/rest/v2
      */
-    public CountryServiceImpl(RestTemplateBuilder builder, @Value("${url.restCountry:https://restcountries.eu/rest/v2}") String url) {
+    public CountryServiceImpl(RestTemplateBuilder builder, @Value("${ipContextInfo.url.restCountry:https://restcountries.eu/rest/v2}") String url) {
         this.restTemplate = builder.build();
         this.restTemplate.setUriTemplateHandler(new DefaultUriBuilderFactory(url));
     }
