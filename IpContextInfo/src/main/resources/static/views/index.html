@@ -25,7 +25,7 @@
             $(document).ready(function () {
                 $("#searchBtn").click(function () {
                     if ($("#ipInput").val().match(/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/)) {
-                        $.getJSON("http://localhost:8080/ip/trace?ip=" + $("#ipInput").val(), function (data) {
+                        $.getJSON("/ip/trace?ip=" + $("#ipInput").val(), function (data) {
                             $("#searchedIp").text(data.ip);
                             $("#txDate").text("Fecha: " + data.date.toLocaleString());
                             $("#txCountryName").text("Pais: " + data.country.name.espValue + " (" + data.country.name.value + ")");
