@@ -61,7 +61,6 @@
         <docker.image.prefix>springio</docker.image.prefix>
     </properties>
 
-
     <build>
         <plugins>
             <plugin>
@@ -72,14 +71,6 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.4</version>
-                <executions>
-                    <execution>
-                        <id>default</id>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <repository>spotify/foobar</repository>
                     <tag>${project.version}</tag>
