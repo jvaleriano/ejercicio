@@ -2,7 +2,7 @@ package com.meli.ipcontextinfo.service;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public interface IpService {
 

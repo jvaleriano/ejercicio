@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public class TransformDtoToCountryCommand implements Command<Country> {
 

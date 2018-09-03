@@ -14,7 +14,7 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 @Service
 public class IpServiceImpl implements IpService {

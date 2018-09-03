@@ -31,7 +31,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

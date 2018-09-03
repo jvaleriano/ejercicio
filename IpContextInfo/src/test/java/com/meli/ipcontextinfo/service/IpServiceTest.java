@@ -25,7 +25,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

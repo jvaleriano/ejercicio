@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  *
- * @author valer
+ * @author jvaleriano
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

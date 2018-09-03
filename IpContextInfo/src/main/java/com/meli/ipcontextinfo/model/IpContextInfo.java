@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**
  *
- * @author valer
+ * @author jvaleriano
  */
 public class IpContextInfo {
 

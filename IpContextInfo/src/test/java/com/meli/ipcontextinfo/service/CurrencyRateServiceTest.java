@@ -28,7 +28,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 /**
  *
- * @author valer
+ * @author jvaleriano
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

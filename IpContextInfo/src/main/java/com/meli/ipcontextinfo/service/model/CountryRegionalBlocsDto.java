@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public class CountryRegionalBlocsDto {
 

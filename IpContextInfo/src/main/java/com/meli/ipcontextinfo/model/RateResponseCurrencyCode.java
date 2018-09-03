@@ -2,7 +2,7 @@ package com.meli.ipcontextinfo.model;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public enum RateResponseCurrencyCode {
 

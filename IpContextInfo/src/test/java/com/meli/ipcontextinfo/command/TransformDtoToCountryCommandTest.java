@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author valer
+ * @author jvaleriano
  */
 public class TransformDtoToCountryCommandTest {
     

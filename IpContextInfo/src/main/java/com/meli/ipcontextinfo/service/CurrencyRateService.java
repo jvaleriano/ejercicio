@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public interface CurrencyRateService {
     

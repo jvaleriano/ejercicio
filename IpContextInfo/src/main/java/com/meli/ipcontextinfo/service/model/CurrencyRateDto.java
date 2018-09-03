@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public class CurrencyRateDto {
 

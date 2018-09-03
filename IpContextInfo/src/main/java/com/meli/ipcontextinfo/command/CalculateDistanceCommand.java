@@ -4,7 +4,7 @@ import com.meli.ipcontextinfo.model.Coordinate;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public class CalculateDistanceCommand implements Command<Double> {
 

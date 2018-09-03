@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public class Currency {
     

@@ -2,7 +2,7 @@ package com.meli.ipcontextinfo.service.model;
 
 /**
  *
- * @author VAL13448
+ * @author jvaleriano
  */
 public class CountryLanguajeDto {
 

@@ -34,7 +34,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 /**
  *
- * @author valer
+ * @author jvaleriano
  */
 @RunWith(SpringRunner.class)
 @ActiveProfiles("test")
